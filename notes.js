@@ -1,26 +1,21 @@
 const addbutton=document.querySelector('.addbutton');
-const colors=["rgb(247,136,136)","rgb(243,210,80)","rgb(144,204,244)"];
+const colors=["rgb(144,204,244)","rgb(243,210,80)","rgb(247,136,136)"];
 const addsomething=function(){
     console.log("eow");
     const description=document.querySelector('.descriptionone');
     const title=document.querySelector('.titleone');
-
-    // console.log(description);
-    // console.log(title)
-//    console.log(description.value)
+const firstcontainer=document.querySelector(".notescontainer")
+   console.log(firstcontainer)
     let newtitle=document.createElement('div');
     let newdescription=document.createElement('div');
     let newcontainer=document.createElement('div');
     let newbutton=document.createElement("span");
     newbutton.innerHTML="&times"
     newbutton.classList.add("button");
-    // document.body.appendChild(newbutton);
-    document.body.appendChild(newcontainer);
+    
+    firstcontainer.appendChild(newcontainer);
     const colorselection=document.querySelector("#colorselection").selectedIndex;
     console.log(colorselection);
-    // const selected=colors[colorselection];
-    // newcontainer.style.backgroundColor="blue";
-    // console.log(newcontainer)
     
    
         newcontainer.style.backgroundColor=colors[colorselection];
@@ -31,7 +26,7 @@ const addsomething=function(){
 
 
     newtitle.textContent=title.value;
-    // newtitle.appendChild(newbutton);
+    
     newcontainer.appendChild(newtitle);
     newtitle.classList.add('title');
     
@@ -43,16 +38,10 @@ const addsomething=function(){
     newdescription.classList.add('description');
     
     console.log(newdescription);
-    // newcontainer.appendChild(newbutton);
-   
-
     
-    // console.log(newcontainer);
-    // console.log(newtitle);
     title.value='';
     description.value='';
-    // const button=document.querySelectorAll(".button");
-    // console.log(button);
+    
     
     const button=document.querySelectorAll(".button");
     const performthis=function(){
@@ -68,7 +57,7 @@ addbutton.addEventListener('click',addsomething);
 
 const button=document.querySelectorAll(".button");
 const performthis=function(){
-    console.log("eoe");
+    
     console.log(this);
 }
 button.forEach(buttons=>buttons.addEventListener('click',performthis));
