@@ -7,6 +7,8 @@
     /* display: block; */
     text-align: center;
     margin: 10px;
+    /* min-height: 100vh; */
+    /* height: 100vh; */
 }
 .firstcontainer input{
     padding: 10px;
@@ -62,4 +64,26 @@
   /* background-color: red; */
   margin-bottom: 0%;
   padding: 0%;
+}
+span select{
+    margin-right: 90px;
+}
+span select,span button{
+    width: 150px;
+    height:30px;
+    border-radius: 25px;
+    
+    
+}
+span select{
+    padding-left:20px ;
+    background-color: #5DA2D5;
+    border: none;
+    color:white;
+}
+span button{
+    background-color: #5DA2D5;
+    border: none;
+    color:white;
+
 }
